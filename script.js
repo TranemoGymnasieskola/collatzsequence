@@ -1,9 +1,10 @@
-let terms = 0;
+let numTerms = 0;
 let high  = 0;
 let highN = undefined;
 let sq    = [];
 
-for (n=1000000; n>1; n--) {
+for (let n=1000000; n>1; n--) {
+	let initN = n
 	while (n !== 1) {
 		if (n % 2 === 0) {
 			n /= 2
@@ -11,11 +12,11 @@ for (n=1000000; n>1; n--) {
 			n *= 3
 			n++
 		}
-		terms++	
+		numTerms++	
 	} 
-	if (terms > high) {
-		high = terms
-		highN = n
+	if (numTerms > high) {
+		high = numTerms
+		highN = initN
 	}
 }
 
